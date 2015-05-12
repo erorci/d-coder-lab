@@ -78,20 +78,20 @@ public class CardAPILab {
         
         //Basic info
         card.setId(id);
-        card.setAuthorDisplayName( "Daniel Viveiros" );
-        card.setAuthorEmail( "viveiros@ciandt.com");
+        card.setAuthorDisplayName( "VaiCoders" );
+        card.setAuthorEmail( "emersonrs@ciandt.com");
         card.setAuthorId(5639445604728832L);
-        card.setAuthorImageURL("https://lh3.googleusercontent.com/-tr003KjHJYk/AAAAAAAAAAI/AAAAAAAAKQ4/4wSwmn3j46c/photo.jpg?sz=50");
+        card.setAuthorImageURL("");
         card.setAutoModerated(true);
         card.setCreatedAt(new Date());
         card.setIsFeatured(false);
-        card.setMnemonic( "daniel-viveiros-test");
-        card.setProviderUserId("118239183782204424177");
+        card.setMnemonic( "vaicoders-posts");
+        card.setProviderUserId("0202198219988251445");
         card.setUpdated(null);
         card.setExpirationDate(null);
         card.setPublishingDate(null);
         card.setSecurityLevel(0);
-        card.addCategory("teste");
+        card.addCategory("vaicoders");
         card.addCategory("d-coder");
         
         //i18n
@@ -128,7 +128,7 @@ public class CardAPILab {
             cardAPILab.createCard( cardAPILab.createCardObject(123L, "This is the title", 
                     "This is the summary", "This is the <b>content</b>") );
             cardAPILab.searchCards("title", "pt-BR", null);
-            cardAPILab.getCard("daniel-viveiros-test");
+            cardAPILab.getCard("vaicoders-posts");
         } catch ( Exception exc ) {
             exc.printStackTrace();
             System.exit(-1);

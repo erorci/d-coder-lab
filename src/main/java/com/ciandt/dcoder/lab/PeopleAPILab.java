@@ -134,15 +134,15 @@ public class PeopleAPILab {
         Person person = new Person();
         //Make this ID unique, I'm using my phone number here with country and area code
         person.setId( 5511966422351L );
-        person.setDisplayName("Daniel Viveiros");
-        person.setEmail("viveiros@ciandt.com");
+        person.setDisplayName("VaiCoders");
+        person.setEmail("emersonr@ciandt.com");
         person.setActive(true);
-        person.setBirthdate( new SimpleDateFormat( "dd-MM-yyyy" ).parse("04-04-1979") );
+        person.setBirthdate( new SimpleDateFormat( "dd-MM-yyyy" ).parse("02-02-1982") );
         person.setCompany( "CI&T" );
         person.setGender( "Male" );
         person.setLastUpdate( new Date() );
         person.setLocale( "pt-BR");
-        person.setMaritalStatus( "Divorced" );
+        person.setMaritalStatus( "Married" );
         person.setPosition( "Developer" );
         person.setType( "USER" );
         
@@ -160,30 +160,30 @@ public class PeopleAPILab {
         profile.setId( person.getId() );
         profile.setPersonId( person.getId() );
         profile.setBirthdate( person.getBirthdate() );
-        profile.setBraggingRights( "I'll win this competition");
+        profile.setBraggingRights( "Working to provide smart data");
         profile.setCoach( "cyrillo");
-        profile.setCoverURL("https://lh6.googleusercontent.com/-xT1MINh2gDM/U4KfNDofBDI/AAAAAAAAJIU/Q15YoAlGqq0/s931-fcrop64=1,00002599e494d11f/IMG_2798.jpg");
+        profile.setCoverURL("https://lh5.googleusercontent.com/-Pk4eXT2yLLQ/VK_YGesg8aI/AAAAAAAAAHI/lHNyOQZShec/w1044-h565-no/sobre.png");
         profile.setDisplayName(person.getDisplayName());
         profile.setEmail(person.getEmail());
         profile.setEmployerName(person.getCompany());
         profile.setGender(person.getGender());
-        profile.setImageURL("https://lh4.googleusercontent.com/-ylL83Hn8XJ8/VHXg9M4Q-XI/AAAAAAAAKJs/NPJU7dS1KUQ/s895-no/FotoPerfil_Square.jpg");
-        profile.setIntroduction("Hi all! I'm creating this tutorial to make it easier to understand and use Smart Canvas");
+        profile.setImageURL("https://lh3.googleusercontent.com/-OaHRAFfrtY0/VK_X3JDRCjI/AAAAAAAAAG4/FY-2alKz2CA/s129-no/emersonr.jpg");
+        profile.setIntroduction("VaiCoders Project");
         profile.setJobTitle(person.getPosition());
         profile.setLastUpdated(person.getLastUpdate());
         profile.setLocale(person.getLocale());
-        profile.setManager("cyrillo");
+        profile.setManager("aminadab");
         profile.setMaritalStatus(person.getMaritalStatus());
         profile.setPosition(person.getPosition());
-        profile.setProfileURL("https://plus.google.com/118239183782204424177");
+        profile.setProfileURL("https://plus.google.com/+EmersonRodrigoOrci");
         
         //You can create your own provider id! That will enable you to search for publishers later
         //using this as a filter, so you will be able to just get the people you want
-        profile.setProviderId("ViveirosGooglePlus");
-        profile.setProviderUserId("118239183782204424177");
+        profile.setProviderId("EmersonRVaiCoders");
+        profile.setProviderUserId("0202198219988251445");
         
         profile.setTagLine("Relevance, Continuously");
-        profile.setUsername("viveiros");
+        profile.setUsername("emersonr");
         
         return profile;
     }
@@ -205,8 +205,8 @@ public class PeopleAPILab {
 		    
 		    //this is just for testing
 			peopleAPILab.listPersons();
-			peopleAPILab.searchPersonByEmail("viveiros@ciandt.com");
-			peopleAPILab.findProfileByRoleNameAndProviderId("ViveirosGooglePlus", "PUBLISHER");
+			peopleAPILab.searchPersonByEmail("emersonr@ciandt.com");
+			peopleAPILab.findProfileByRoleNameAndProviderId("EmersonRVaiCoders", "PUBLISHER");
 		} catch ( Exception exc ) {
 			exc.printStackTrace();
 			System.exit(-1);
