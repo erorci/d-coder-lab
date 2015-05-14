@@ -117,7 +117,7 @@ public class CardAPILab {
 		card.setContent(content);
 		card.setProviderContentId(String.valueOf(id));
 		card.setProviderContentURL("http://ciandt.com");
-		card.setProviderId("VaiCoders1305");
+		card.setProviderId("VaiCoders1405");
 		card.setProviderUpdated(new Date());
 		card.setProviderPublished(new Date());
 
@@ -138,8 +138,10 @@ public class CardAPILab {
 	 */
 	public static void main(String[] args) {
 		try {
-			CardsTermometro();
-			CardsRadar();
+			//CardsTermometro();
+			//CardsRadar();
+			CardsFakeGlassdor();
+			CardsFakeLoveMondays();
 		} catch (Exception exc) {
 			exc.printStackTrace();
 			System.exit(-1);
@@ -221,14 +223,97 @@ public class CardAPILab {
 	}
 	
 	public static void CardsFakeGlassdor() {
-		CardAPILab cardAPILab = new CardAPILab();
-		
+		CardAPILab cardAPILab = new CardAPILab();		
 		Long uniqueID = UniqueID.get();
-		String title = " Como está o clima lá fora ?";
+		String title = "Glassdoor: Como está o clima lá fora ?";
 		String summary = "";
-		String content =  "<img  height='80' width='80' src='https://lh5.googleusercontent.com/NdHGlO99xqsaIi0UtMc-0EWH0DZxfFku1vzys5_H9iQkKFUTfYbWsOGxbe2meSeZF2mi9oNCgv5HLhA=w1576-h611'></img><br><br>Resultado geral de todas as avaliações (média) dos seguintes tópicos:<br><br><ul><li>* Compensation and Benefits</li><li>* Work/Life balance</li><li>* Senior Management</li><li>* Culture & Values</li><li>* Career Opportunities</li></UL>";
-		cardAPILab.createCard(cardAPILab.createCardObject(uniqueID, title,	summary, content, null));
-		
+		String url = "https://github.com/erorci/d-coder-lab/blob/master/Glassdoor_avg.png?raw=true";
+		String content =  "Resultado geral de todas as avaliações (média) dos seguintes tópicos:<br><br><ul><li>* Compensation and Benefits</li><li>* Work/Life balance</li><li>* Senior Management</li><li>* Culture & Values</li><li>* Career Opportunities</li></UL>";
+		Attachment attachment = new Attachment();
+		attachment.setType("photo");
+		attachment.setImageHeight(80L);
+		attachment.setImageWidth(80L);
+		attachment.setOriginalImageURL(url);		
+		cardAPILab.createCard(cardAPILab.createCardObject(uniqueID, title,	summary, content, attachment));		
 	}
+	
+	
+	public static void CardsFakeLoveMondays() {
+		CardAPILab cardAPILab = new CardAPILab();		
+		Long uniqueID = UniqueID.get();
+		String title = "Love Mondays: Como está o clima lá fora?";
+		String summary = "";
+		String url = "https://github.com/erorci/d-coder-lab/blob/master/Love_mondays_grafico_resumo.PNG?raw=true";
+		String content =  "<br><br>Resultado geral de todas as avaliações (média) dos seguintes tópicos:<br><br><ul><li>* Remuneração e benefícios</li><li>* Qualidade de Vida</li><li>* Cultura da Empresa</li><li>* Oportunidade de Carreira</li></UL>";
+		Attachment attachment = new Attachment();
+		attachment.setType("photo");
+		attachment.setImageHeight(80L);
+		attachment.setImageWidth(80L);
+		attachment.setOriginalImageURL(url);		
+		cardAPILab.createCard(cardAPILab.createCardObject(uniqueID, title,	summary, content, attachment));		
+	}
+	
+	
+	public static void CardsAnaliseTendenciaClimaCategoria() {
+		CardAPILab cardAPILab = new CardAPILab();		
+		Long uniqueID = UniqueID.get();
+		String title = "Análise de Tendência do Clima por categoria";
+		String summary = "";
+		String url = "https://github.com/erorci/d-coder-lab/blob/master/chart_trend_cat.png?raw=true";
+		String content =  "No gráfico podemos ver a análise de tendência de cada uma das categorias do GPTW analisadas.";
+		Attachment attachment = new Attachment();
+		attachment.setType("photo");
+		attachment.setImageHeight(80L);
+		attachment.setImageWidth(80L);
+		attachment.setOriginalImageURL(url);		
+		cardAPILab.createCard(cardAPILab.createCardObject(uniqueID, title,	summary, content, attachment));		
+	}
+	
+	public static void CardsAnaliseTendenciaClimaLabel() {
+		CardAPILab cardAPILab = new CardAPILab();		
+		Long uniqueID = UniqueID.get();
+		String title = "Análise de Tendência do Clima por label";
+		String summary = "";
+		String url = "https://github.com/erorci/d-coder-lab/blob/master/chart_trend_label.png?raw=true";
+		String content =  "No gráfico podemos ver a análise de tendência de cada uma das subcategorias do GPTW  (labels) analisadas";
+		Attachment attachment = new Attachment();
+		attachment.setType("photo");
+		attachment.setImageHeight(80L);
+		attachment.setImageWidth(80L);
+		attachment.setOriginalImageURL(url);		
+		cardAPILab.createCard(cardAPILab.createCardObject(uniqueID, title,	summary, content, attachment));		
+	}
+	
+	
+	public static void TagCloudCategory() {
+		CardAPILab cardAPILab = new CardAPILab();		
+		Long uniqueID = UniqueID.get();
+		String title = "Categorias utilizadas";
+		String summary = "";
+		String url = "https://github.com/erorci/d-coder-lab/blob/master/tagcloud_category.png?raw=true";
+		String content =  "Estas são as categorias mapeadas na análise de clima hoje.";
+		Attachment attachment = new Attachment();
+		attachment.setType("photo");
+		attachment.setImageHeight(80L);
+		attachment.setImageWidth(80L);
+		attachment.setOriginalImageURL(url);		
+		cardAPILab.createCard(cardAPILab.createCardObject(uniqueID, title,	summary, content, attachment));		
+	}
+	
+	
+	public static void TagCloudLabel() {
+		CardAPILab cardAPILab = new CardAPILab();		
+		Long uniqueID = UniqueID.get();
+		String title = "Subcategorias do GPTW  (labels) analisadas";
+		String summary = "";
+		String url = "https://github.com/erorci/d-coder-lab/blob/master/tagcloud_label.png?raw=true";
+		String content =  "Estas são as sub-categorias mapeadas na análise de clima hoje.";
+		Attachment attachment = new Attachment();
+		attachment.setType("photo");
+		attachment.setImageHeight(80L);
+		attachment.setImageWidth(80L);
+		attachment.setOriginalImageURL(url);		
+		cardAPILab.createCard(cardAPILab.createCardObject(uniqueID, title,	summary, content, attachment));		
+	}	
 
 }
