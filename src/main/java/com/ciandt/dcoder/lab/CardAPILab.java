@@ -117,7 +117,7 @@ public class CardAPILab {
 		card.setContent(content);
 		card.setProviderContentId(String.valueOf(id));
 		card.setProviderContentURL("http://ciandt.com");
-		card.setProviderId("VaiCoders1405");
+		card.setProviderId("VaiCoders1405Full");
 		card.setProviderUpdated(new Date());
 		card.setProviderPublished(new Date());
 
@@ -138,10 +138,14 @@ public class CardAPILab {
 	 */
 	public static void main(String[] args) {
 		try {
-			//CardsTermometro();
-			//CardsRadar();
+			CardsTermometro();
+			CardsRadar();
 			CardsFakeGlassdor();
 			CardsFakeLoveMondays();
+			CardsAnaliseTendenciaClimaCategoria();
+			CardsAnaliseTendenciaClimaLabel();
+			CardsTagCloudCategory();
+			CardsTagCloudLabel();			
 		} catch (Exception exc) {
 			exc.printStackTrace();
 			System.exit(-1);
@@ -285,7 +289,7 @@ public class CardAPILab {
 	}
 	
 	
-	public static void TagCloudCategory() {
+	public static void CardsTagCloudCategory() {
 		CardAPILab cardAPILab = new CardAPILab();		
 		Long uniqueID = UniqueID.get();
 		String title = "Categorias utilizadas";
@@ -301,12 +305,12 @@ public class CardAPILab {
 	}
 	
 	
-	public static void TagCloudLabel() {
+	public static void CardsTagCloudLabel() {
 		CardAPILab cardAPILab = new CardAPILab();		
 		Long uniqueID = UniqueID.get();
 		String title = "Subcategorias do GPTW  (labels) analisadas";
 		String summary = "";
-		String url = "https://github.com/erorci/d-coder-lab/blob/master/tagcloud_label.png?raw=true";
+		String url = "https://github.com/erorci/d-coder-lab/blob/master/tag_cloud_labels.png?raw=true";
 		String content =  "Estas são as sub-categorias mapeadas na análise de clima hoje.";
 		Attachment attachment = new Attachment();
 		attachment.setType("photo");
