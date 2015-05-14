@@ -117,7 +117,7 @@ public class CardAPILab {
 		card.setContent(content);
 		card.setProviderContentId(String.valueOf(id));
 		card.setProviderContentURL("http://ciandt.com");
-		card.setProviderId("VaiCodersProviderId1305");
+		card.setProviderId("VaiCoders1305");
 		card.setProviderUpdated(new Date());
 		card.setProviderPublished(new Date());
 
@@ -218,6 +218,17 @@ public class CardAPILab {
 		cardAPILab.createCard(cardAPILab.createCardObject(uniqueID, title,
 				summary, content, attachment));
 
+	}
+	
+	public static void CardsFakeGlassdor() {
+		CardAPILab cardAPILab = new CardAPILab();
+		
+		Long uniqueID = UniqueID.get();
+		String title = " Como está o clima lá fora ?";
+		String summary = "";
+		String content =  "<img  height='80' width='80' src='https://lh5.googleusercontent.com/NdHGlO99xqsaIi0UtMc-0EWH0DZxfFku1vzys5_H9iQkKFUTfYbWsOGxbe2meSeZF2mi9oNCgv5HLhA=w1576-h611'></img><br><br>Resultado geral de todas as avaliações (média) dos seguintes tópicos:<br><br><ul><li>* Compensation and Benefits</li><li>* Work/Life balance</li><li>* Senior Management</li><li>* Culture & Values</li><li>* Career Opportunities</li></UL>";
+		cardAPILab.createCard(cardAPILab.createCardObject(uniqueID, title,	summary, content, null));
+		
 	}
 
 }
